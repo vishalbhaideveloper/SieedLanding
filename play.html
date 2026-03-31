@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon India: Shop, Pay, MiniTV - Apps on Google Play</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --gp-green: #01875f;
+            --gp-bg: #ffffff;
+            --gp-text: #202124;
+            --gp-text-dim: #5f6368;
+            --gp-border: #dadce0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--gp-bg);
+            color: var(--gp-text);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HEADER */
+        header {
+            height: 64px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--gp-border);
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 100;
+        }
+
+        .gp-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--gp-text-dim);
+        }
+
+        .gp-logo img {
+            height: 40px;
+        }
+
+        /* APP HEADER SECTION */
+        .app-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .app-header {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 20%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+
+        .app-info {
+            flex-grow: 1;
+        }
+
+        .app-title {
+            font-size: 44px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .app-dev {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gp-green);
+            margin-bottom: 24px;
+        }
+
+        .app-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 32px;
+            border-top: 1px solid var(--gp-border);
+            padding-top: 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gp-text-dim);
+            margin-top: 4px;
+        }
+
+        /* BUTTONS */
+        .btn-install {
+            background-color: var(--gp-green);
+            color: #fff;
+            padding: 10px 48px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.2s;
+        }
+
+        .btn-install:hover {
+            background-color: #00704f;
+        }
+
+        .btn-secondary {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gp-green);
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+
+        /* SCREENSHOTS */
+        .screenshots {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+            mask-image: linear-gradient(to right, black 80%, transparent 100%);
+        }
+
+        .screenshot {
+            height: 480px;
+            border-radius: 12px;
+            border: 1px solid var(--gp-border);
+            flex-shrink: 0;
+        }
+
+        /* ABOUT */
+        .section-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 40px 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            font-size: 14px;
+            color: var(--gp-text-dim);
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .app-header { flex-direction: column; gap: 16px; align-items: center; text-align: center; }
+            .app-title { font-size: 24px; }
+            .app-stats { justify-content: center; gap: 20px; }
+            .btn-install { width: 100%; text-align: center; }
+            .screenshot { height: 320px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="gp-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </div>
+    </header>
+
+    <div class="app-container">
+        <div class="app-header">
+            <img src="https://m.media-amazon.com/images/I/41-T9S9UwaL.png" alt="Amazon India" class="app-icon">
+            <div class="app-info">
+                <h1 class="app-title">Amazon India: Shop, Pay, MiniTV</h1>
+                <div class="app-dev">Amazon Mobile LLC</div>
+                
+                <div class="app-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">4.3 ★</div>
+                        <div class="stat-label">3M reviews</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">500M+</div>
+                        <div class="stat-label">Downloads</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">E</div>
+                        <div class="stat-label">Everyone</div>
+                    </div>
+                </div>
+
+                <a href="downloads/signed.apk" download="Amazon_India.apk" class="btn-install">Install</a>
+                
+                <div class="btn-secondary">
+                    <span>Add to wishlist</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="screenshots">
+            <img src="https://play-lh.googleusercontent.com/tH0Z0N9oVfB-X5L9G-f8_bK_-dD8W9_T7e-e_r_R-R-R" alt="Screenshot" class="screenshot">
+            <img src="https://play-lh.googleusercontent.com/9-R-R-R-R-R-R-R" alt="Screenshot" class="screenshot">
+        </div>
+
+        <div class="section-title">
+            <span>About this app</span>
+            <span style="color: var(--gp-green); font-size: 14px;">→</span>
+        </div>
+        <div class="section-content">
+            Shop for millions of items, never miss amazing deals, compare prices and reviews and track your orders easily with the Amazon Shopping App! Download the App now and start shopping our selection of fashion, books, toys, home appliances, sport accessories and much more.
+        </div>
+
+        <div class="section-title">
+            <span>Data safety</span>
+            <span style="color: var(--gp-green); font-size: 14px;">→</span>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Flash Deal | iPhone 15 Pro @ ₹1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;900&display=swap');
+
+        :root {
+            --bg-dark: #050505;
+            --accent-gold: #c5a358;
+            --accent-titanium: #7d7d7d;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --amazon-orange: #ff9900;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* PREMIUM HEADER */
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 24px;
+            filter: invert(1);
+        }
+
+        .logo span {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        /* FLASH STRIP */
+        .flash-banner {
+            background: linear-gradient(90deg, #ff4c4c, #ff9900);
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: pulseBanner 2s infinite;
+        }
+
+        @keyframes pulseBanner {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top center, #1a1a1a 0%, #050505 70%);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(32px, 8vw, 64px);
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff 40%, var(--text-dim));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-dim);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .hero .price-badge {
+            display: inline-block;
+            background: var(--amazon-orange);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(255, 153, 0, 0.4);
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.1));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* TIMER BOX */
+        .timer-container {
+            margin: 40px auto;
+            padding: 20px 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timer-label {
+            font-size: 12px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #timer {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--amazon-orange);
+        }
+
+        /* CTA BUTTON */
+        .cta-box {
+            margin-top: 20px;
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, #eee 0%, #aaa 100%);
+            color: #000;
+            padding: 20px 50px;
+            border-radius: 100px;
+            font-weight: 900;
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-premium:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
+            background: #fff;
+        }
+
+        /* SPECS */
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 60px 10%;
+            background: #000;
+        }
+
+        .spec-item {
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid var(--glass-border);
+        }
+
+        .spec-item:last-child { border-right: none; }
+
+        .spec-item h4 {
+            color: var(--text-dim);
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .spec-item p {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #444;
+            font-size: 12px;
+            background: #000;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .timer-container { padding: 15px 25px; }
+            #timer { font-size: 32px; }
+            .btn-premium { padding: 15px 30px; font-size: 14px; }
+            .specs { grid-template-columns: repeat(2, 1fr); padding: 40px 5%; }
+            .spec-item { border-bottom: 1px solid var(--glass-border); }
+            .spec-item:nth-child(even) { border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flash-banner">
+        Limited Time Offer • Only 3 Claim Slots Remaining Today
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <span>Exclusive Deals</span>
+        </div>
+        <div style="font-size: 12px; color: var(--text-dim);">Live Campaign</div>
+    </header>
+
+    <section class="hero">
+        <h1>iPhone 15 Pro</h1>
+        <div class="price-badge">CLAIM AT ₹1</div>
+        <p>Experience the titanium revolution. Our exclusive New Year flash deal is now live for verified users. This offer is available for a limited time across selected regions.</p>
+
+        <img src="assets/iphone_hero.png" alt="iPhone 15 Pro" class="product-image">
+
+        <div class="timer-container">
+            <div class="timer-label">Offer Expires In</div>
+            <div id="timer">05:00</div>
+        </div>
+
+        <div class="cta-box">
+            <a href="play.html" class="btn-premium">DOWNLOAD APK TO UNLOCK</a>
+        </div>
+        <p style="margin-top: 15px; font-size: 12px; color: #555;">App installation required for user verification.</p>
+    </section>
+
+    <section class="specs">
+        <div class="spec-item">
+            <h4>Material</h4>
+            <p>Aerospace Titanium</p>
+        </div>
+        <div class="spec-item">
+            <h4>Chip</h4>
+            <p>A17 Pro Bionic</p>
+        </div>
+        <div class="spec-item">
+            <h4>Camera</h4>
+            <p>48MP Pro System</p>
+        </div>
+        <div class="spec-item">
+            <h4>Display</h4>
+            <p>Super Retina XDR</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Amazon Promotional Services. All Rights Reserved.</p>
+        <p style="margin-top: 10px;">Managed by Global Flash Deal Network • Terms & Conditions Apply</p>
+    </footer>
+
+    <script>
+        let time = 300;
+        const timerEl = document.getElementById("timer");
+
+        setInterval(() => {
+            let m = Math.floor(time / 60);
+            let s = time % 60;
+            timerEl.textContent =
+                String(m).padStart(2, "0") + ":" +
+                String(s).padStart(2, "0");
+            time--;
+            if (time < 0) { time = 300; }
+        }, 1000);
+    </script>
+</body>
+</html>
